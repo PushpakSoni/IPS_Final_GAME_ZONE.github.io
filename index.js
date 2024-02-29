@@ -6,7 +6,7 @@ const round = document.querySelector('.round_number') //Targeting number of roun
 const score1 = document.querySelector("#score_A") //Targeting score of Team-1
 const score2 = document.querySelector("#score_B") //Targeting score of Team-2
 
-fetch("https://ipsgwalior.org/scoreboard/screenscore.php/api").then(res => { // Fetching API
+fetch("https://ipsgwalior.org/scoreboard/screenscore.php/currentscore").then(res => { // Fetching API
     return res.json() //Conerting API data into JSON Format 
 }).then(data => {
     // console.log(data.teamnameA)
@@ -22,7 +22,7 @@ fetch("https://ipsgwalior.org/scoreboard/screenscore.php/api").then(res => { // 
 
 
 setInterval(function () {
-    fetch("https://ipsgwalior.org/scoreboard/screenscore.php/api").then(res => {
+    fetch("https://ipsgwalior.org/scoreboard/screenscore.php/currentscore").then(res => {
         return res.json()
     }).then(data => {
         // console.log(data.teamnameA)
