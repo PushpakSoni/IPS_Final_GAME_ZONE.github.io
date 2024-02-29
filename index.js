@@ -17,23 +17,23 @@ fetch("https://ipsgwalior.org/scoreboard/screenscore.php/currentscore").then(res
     round.innerText = data.round
     score1.innerText = data.team_a
     score2.innerText = data.team_b
-    // console.log(data)
+    console.log(data)
 })
 
 
-setInterval(function () {
-    fetch("https://ipsgwalior.org/scoreboard/screenscore.php/currentscore").then(res => {
-        return res.json()
-    }).then(data => {
-        // console.log(data.teamnameA)
+// setInterval(function () {
+//     fetch("https://ipsgwalior.org/scoreboard/screenscore.php/currentscore").then(res => {
+//         return res.json()
+//     }).then(data => {
+//         // console.log(data.teamnameA)
 
-        game_n.innerText = data.game
-        team_1.innerText = data.teamnameA
-        team_2.innerText = data.teamnameB
-        round.innerText = data.round
-        score1.innerText = data.team_a
-        score2.innerText = data.team_b
-        // console.log(data)
-    })
-}, 1000);
+//         game_n.innerText = data.game
+//         team_1.innerText = data.teamnameA
+//         team_2.innerText = data.teamnameB
+//         round.innerText = data.round
+//         score1.innerText = data.team_a
+//         score2.innerText = data.team_b
+//         // console.log(data)
+//     })
+// }, 1000);
 
